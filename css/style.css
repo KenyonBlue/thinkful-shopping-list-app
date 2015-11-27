@@ -1,0 +1,166 @@
+/* CSS reset 
+	(all the browsers will see the website in the same by setting every tag to 0 (the website will look the same on all browsers))
+*/
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed,  figure, figcaption, footer, header, hgroup,  menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+}
+
+
+/* General styles 
+	(the styles used everywhere in the page (like the Body) or styles which are used in more than 2 of the modules bellow (h2, h3, h4, h5, h6, p, a, ul, li))
+*/
+body { 
+	font-family: 'Handlee', Arial, serif; 
+	color: #0D59A9;
+	font-weight: 400; 
+	background-image: url("../images/office-desk-background.jpg");
+	background-size: cover;
+	background-position: center center;
+}
+.title,
+.content,
+footer {
+	width: 957px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+/* Header styles 
+	(all the styles inside the < header > or < nav > tags) 
+*/
+.title {
+	background-image: url("../images/notepad-backgrounds-top.jpg");
+	background-repeat: no-repeat;
+	height: 179px;
+	margin-top: 2rem;
+}
+.title h1{
+	text-align: center;
+	font-size: 410%;
+	padding-top: 4rem;
+	text-shadow:2px 2px 2px black;
+	color: #0D59A9;
+   -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: black;
+}
+.title h1:hover{
+	font-size: 420%;
+}
+
+/* Content styles 
+	(all the styles inside the < sections > or < aside > tags)
+*/
+
+
+.content {
+	background-image: url("../images/notepad-backgrounds-middle.jpg");
+	background-repeat: repeat-y;
+	min-height: 3rem;
+}
+.content #addItem,
+.content #addItemValue{ 
+	background-color: #0D59A9;
+    border-color: #0D59A9;
+    border-radius: 4px;
+    border-style: none;
+    color: white;
+    padding: 0.2rem;
+    padding-top: 0;
+    padding-bottom: 0;
+    text-align: center;
+    text-shadow: none;
+    width: auto;
+}
+.content #addItem:hover,
+.content #addItemValue:hover{
+	border:2px solid black;
+}
+.content ul {
+    list-style: outside none none;
+    width: 40%;
+    margin-left: auto;
+	margin-right: auto;
+	margin-top: 2rem;
+}
+.content li{
+    display: block;
+    height: 2.5em;
+    padding-top: 0.5em;
+}
+.content li {
+	text-align: left;
+}
+.content .ticked{
+	background-color: #05ff2a;
+	border: 2px solid black;
+    border-radius: 4px;
+    margin-bottom: 1px;
+}
+.content .list:hover{
+	font-size: 1.1rem;
+}
+.content .checkbox, .content .delete {
+    background-color: transparent;
+    border-radius: 1.25rem;
+    border-style: none;
+    color: #0D59A9;
+    height: 28px;
+    margin-left: 1.2em;
+    margin-right: 1.2em;
+    width: 28px;
+}
+.content .delete {
+    float: right;
+}
+.content #addItem:hover, .content .checkbox:hover {
+    background-color: #0D59A9;
+    color: white;
+    border:2px solid black;
+}
+.content .delete:hover {
+    background-color: #0D59A9;
+    color: white;
+    border:2px solid black;
+}
+
+
+
+
+
+
+
+/* Footer styles 
+	(all the styles inside the < footer > tag)
+*/
+footer{
+	background-image: url("../images/notepad-backgrounds-bottom.jpg");
+	background-repeat: no-repeat;
+	height: 117px;	
+}
+footer button{
+	background-color: #0D59A9;
+    border-color: #0D59A9;
+    border-radius: 4px;
+    border-style: none;
+    color: white;
+    font-size: 1.125rem;
+    margin-top: 3rem;
+    padding: 0rem 1.5rem;
+    text-align: center;
+    text-shadow: none;
+    width: 8.688rem;
+}
+.delete-all:hover {
+	border:2px solid black;
+}
+
+
+
+/* Responsive styles 
+	(the very last module in the CSS, contains all the media queries and it is dealing with the compatibility with mobiles and tablets)
+*/
