@@ -96,12 +96,8 @@ $(document).on('keypress', function (key) {
 
 /*on click on the ".delete" button fire the action called deleteItem()*/
 
-$(document).on('click', '.delete', function () {
-    deleteItem();
-});
+$(document).on('click', '.delete', deleteItem);
 
 /*on click on the ".checkbox" button fire the action called tickItem()*/
 
-$(document).on('click', '.checkbox', function () {
-    tickItem();
-});
+$(document).on('click', '.checkbox', tickItem);
