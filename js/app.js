@@ -26,7 +26,7 @@ function addItem() {
     //if the input is valid ....
     else {
 
-        //dynamicaly create one row inside the shopping list 
+        //dynamicaly create one row inside the shopping list
         var row = $('<li><button class="checkbox">✓</button><span class="list">' + itemValue + '</span><button class="delete">x</button></li>');
 
         //add each row to the previous ones
@@ -38,8 +38,8 @@ function addItem() {
 
 }
 
-/*function to select an item to cross out 
-	Note: create the 'ticked' class in CSS file first! You don't need to use it in the index.html because the JS will be adding it automatically to the index
+/*function to select an item to cross out
+    Note: create the 'ticked' class in CSS file first! You don't need to use it in the index.html because the JS will be adding it automatically to the index
 */
 function tickItem() {
     //$(this) means that on WHATEVER you just clicked, go to the parent of it (in our case the LI) and add / remove the "ticked" class to it
@@ -71,10 +71,16 @@ Inside document ready we are calling all the functions (we used them) and connec
 $(document).ready(function () {
 
     /*on click on the "#addItem" button fire the action called addItem()*/
-    $('#addItem').on('click', addItem);
+
+    $('#addItem').on('click', function () {
+        addItem();
+    });
 
     /*on click on the ".delete-all" fire the action called deleteAll()*/
-    $('.delete-all').on('click', deleteAll);
+
+    $('.delete-all').on('click', function () {
+        deleteAll();
+    });
 
 });
 
@@ -89,7 +95,13 @@ $(document).on('keypress', function (key) {
 });
 
 /*on click on the ".delete" button fire the action called deleteItem()*/
-$(document).on('click', '.delete', deleteItem);
+
+$(document).on('click', '.delete', function () {
+    deleteItem();
+});
 
 /*on click on the ".checkbox" button fire the action called tickItem()*/
-$(document).on('click', '.checkbox', tickItem);
+
+$(document).on('click', '.checkbox', function () {
+    tickItem();
+});
