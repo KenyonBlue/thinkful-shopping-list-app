@@ -93,6 +93,13 @@ $(document).on('keypress', function (key) {
         addItem();
     }
 });
+/*clear list on delete*/
+$(document).on('keypress', function (key) {
+    //keyCode == 46 is the DELETE key
+    if (key.keyCode == 46) {
+        deleteItem();
+    }
+});
 
 /*on click on the ".delete" button fire the action called deleteItem()*/
 
