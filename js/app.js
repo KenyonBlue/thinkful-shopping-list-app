@@ -70,13 +70,13 @@ Inside document ready we are calling all the functions (we used them) and connec
 /*the following 2 function calls should be INSIDE the $(document).ready(function() because the targeted containers where created WHEN the page was loaded*/
 $(document).ready(function () {
 
-    /*on click on the "#addItem" button fire the action called addItem()*/
+    /*on click on the "#addItem" button activate function called addItem()*/
 
     $('#addItem').on('click', function () {
         addItem();
     });
 
-    /*on click on the ".delete-all" fire the action called deleteAll()*/
+    /*on click on the ".delete-all" activate function called deleteAll()*/
 
     $('.delete-all').on('click', function () {
         deleteAll();
@@ -101,10 +101,10 @@ $(document).on('keypress', function (key) {
     }
 });
 
-/*on click on the ".delete" button fire the action called deleteItem()*/
+/*on click on the ".delete" button activate function called deleteItem()*/
 
 $(document).on('click', '.delete', deleteItem);
 
-/*on click on the ".checkbox" button fire the action called tickItem()*/
+/*on click on the ".checkbox" button activate function called tickItem()*/
 
 $(document).on('click', '.checkbox', tickItem);
