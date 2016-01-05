@@ -97,7 +97,7 @@ $(document).on('keypress', function (key) {
 $(document).on('keypress', function (key) {
     //keyCode == 46 is the DELETE key
     if (key.keyCode == 46) {
-        deleteItem();
+        deleteAll();
     }
 });
 
