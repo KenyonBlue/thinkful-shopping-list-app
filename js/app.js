@@ -21,12 +21,10 @@ function addItem() {
     //validate input
     if (itemValue.length === 0) {
         alert('You have to add something!!!');
-
     }
 
     //if the input is valid ....
     else {
-
         //dynamicaly create one row inside the shopping list
         var row = $('<li><button class="checkbox">✓</button><span class="list">' + itemValue + '</span><button class="delete">x</button></li>');
 
@@ -36,7 +34,6 @@ function addItem() {
         //empty the input box after submit by reseting the value
         itemValue = $('#addItemValue').val('');
     }
-
 }
 
 /*function to select an item to cross out
@@ -47,7 +44,6 @@ function tickItem() {
 
     //$(this) means that on WHATEVER you just clicked, go to the parent of it (in our case the LI) and add / remove the "ticked" class to it
     $(this).parent().toggleClass('ticked');
-
 }
 
 /*function to remove an item from the list clicking on the 'x' */
@@ -101,6 +97,7 @@ $(document).on('keypress', function (key) {
         addItem();
     }
 });
+
 /*clear list on delete*/
 $(document).on('keypress', function (key) {
     //keyCode == 46 is the DELETE key
@@ -109,10 +106,16 @@ $(document).on('keypress', function (key) {
     }
 });
 
-/*on click on the ".delete" button activate function called deleteItem()*/
+/*clear list on backspace*/
+$(document).on('keypress', function (key) {
+    //keyCode == 46 is the BACKSPACE key
+    if (key.keyCode == 8) {
+        deleteAll();
+    }
+});
 
+/*on click on the ".delete" button activate function called deleteItem()*/
 $(document).on('click', '.delete', deleteItem);
 
 /*on click on the ".checkbox" button activate function called tickItem()*/
-
 $(document).on('click', '.checkbox', tickItem);
