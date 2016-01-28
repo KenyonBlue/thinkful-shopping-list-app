@@ -13,6 +13,7 @@ before document ready we are defining all the functions and we explain what they
 
 /* function for adding items to the shopping list using the add to list button and enter key */
 function addItem() {
+    //alert("I've just activated the addItem() function");
 
     //get the value of the input box
     var itemValue = $('#addItemValue').val();
@@ -42,6 +43,8 @@ function addItem() {
     Note: create the 'ticked' class in CSS file first! You don't need to use it in the index.html because the JS will be adding it automatically to the index
 */
 function tickItem() {
+    //alert("I've just activated the tickItem() function");
+
     //$(this) means that on WHATEVER you just clicked, go to the parent of it (in our case the LI) and add / remove the "ticked" class to it
     $(this).parent().toggleClass('ticked');
 
@@ -49,12 +52,16 @@ function tickItem() {
 
 /*function to remove an item from the list clicking on the 'x' */
 function deleteItem() {
+    //alert("I've just activated the deleteItem() function");
+
     //$(this) means that on WHATEVER you just clicked, go to the parent of it (in our case the LI) and remove it
     $(this).parent().remove();
 }
 
 /*function to reset and clear the list */
 function deleteAll() {
+    //alert("I've just activated the deleteAll() function");
+
     //find the the UL container (in our case having the class shopping-list) which contains all the LIs and delete it
     $('.shopping-list').empty();
 }
@@ -82,6 +89,7 @@ $(document).ready(function () {
         deleteAll();
     });
 
+    //close document ready
 });
 
 /*the following 3 function calls should be OUTSIDE the $(document).ready(function() because the targeted containers where created AFTER the page was loaded*/
