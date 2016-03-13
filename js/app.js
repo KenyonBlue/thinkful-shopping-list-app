@@ -108,7 +108,7 @@ $(document).on('keypress', function (key) {
 
 /*clear list on backspace*/
 $(document).on('keypress', function (key) {
-    //keyCode == 46 is the BACKSPACE key
+    //keyCode == 8 is the BACKSPACE key
     if (key.keyCode == 8) {
         deleteAll();
     }
