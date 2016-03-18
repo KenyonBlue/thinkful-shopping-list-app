@@ -1,7 +1,7 @@
 /* debugging strategies
 debugging level 1 => check if JS syntax is correct (check console in Web Dev )
 debugging level 2 => check if the targeting is working (check the connection between the HTML element and equivalent JS functionality ==> alert("here"); inside the function)
-debugging level 3 => check if the logic makes sense (check if the JS functionality returns what we expect ==> alert alert(VALUE-NAME); inside the function)
+debugging level 3 => check if the logic makes sense (check if the JS functionality returns what we expect ==> alert(VALUE-NAME); inside the function)
 */
 
 
@@ -31,7 +31,7 @@ function addItem() {
         //add each row to the previous ones
         $('.shopping-list').append(row);
 
-        //empty the input box after submit by reseting the value
+        //empty the input box after submit by resetting the value
         itemValue = $('#addItemValue').val('');
     }
 }
@@ -58,7 +58,7 @@ function deleteItem() {
 function deleteAll() {
     //alert("I've just activated the deleteAll() function");
 
-    //find the the UL container (in our case having the class shopping-list) which contains all the LIs and delete it
+    //find the UL container (in our case having the class shopping-list) which contains all the LIs and delete it
     $('.shopping-list').empty();
 }
 
@@ -70,7 +70,7 @@ STEP 2
 Inside document ready we are calling all the functions (we used them) and connect them with the containers in HTML (for example the #add-button from HTML will be connected with the addItem function)
 ********************************************/
 
-/*the following 2 function calls should be INSIDE the $(document).ready(function() because the targeted containers where created WHEN the page was loaded*/
+/*the following 2 function calls should be INSIDE the $(document).ready(function() because the targeted containers were created WHEN the page was loaded*/
 $(document).ready(function () {
 
     /*on click on the "#addItem" button activate function called addItem()*/
@@ -88,7 +88,19 @@ $(document).ready(function () {
     //close document ready
 });
 
-/*the following 3 function calls should be OUTSIDE the $(document).ready(function() because the targeted containers where created AFTER the page was loaded*/
+
+
+/*the following 3 function calls should be OUTSIDE the $(document).ready(function() because the targeted containers were created AFTER the page was loaded*/
+
+/*on click on the ".delete" button activate function called deleteItem()*/
+$(document).on('click', '.delete', deleteItem);
+
+/*on click on the ".checkbox" button activate function called tickItem()*/
+$(document).on('click', '.checkbox', tickItem);
+
+
+
+/*key press event handlers for extra functionality */
 
 /*add item on enter*/
 $(document).on('keypress', function (key) {
@@ -113,9 +125,3 @@ $(document).on('keypress', function (key) {
         deleteAll();
     }
 });
-
-/*on click on the ".delete" button activate function called deleteItem()*/
-$(document).on('click', '.delete', deleteItem);
-
-/*on click on the ".checkbox" button activate function called tickItem()*/
-$(document).on('click', '.checkbox', tickItem);
