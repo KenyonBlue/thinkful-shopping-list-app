@@ -1,5 +1,6 @@
-/* CSS reset
-    (all the browsers will see the website in the same by setting every tag to 0 (the website will look the same on all browsers))
+/* -------------------------------------
+CSS reset
+(all the browsers will see the website in the same by setting every tag to 0 (the website will look the same on all browsers))
 */
 
 * {
@@ -7,6 +8,17 @@
     padding: 0;
     border: 0;
     font-size: 100%;
+    /*The box-sizing property is used to tell the browser what the sizing properties (width and height) should include border-box.*/
+    box-sizing: border-box;
+    /*reset Chrome user agent styles*/
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-before: 0px;
+    -webkit-padding-after: 0px;
+    -webkit-padding-start: 0px;
+    -webkit-padding-end: 0px;
 }
 
 
@@ -88,7 +100,7 @@ footer {
 .content #addItemValue {
     background-color: #0D59A9;
     border-color: #0D59A9;
-    border-radius: 4px;
+    border-radius: 5px;
     border-style: none;
     color: white;
     padding: 0.3rem;
@@ -111,8 +123,10 @@ footer {
 
 .content li {
     display: block;
-    height: 2.5em;
-    padding-top: 0.5em;
+    height: auto;
+    margin-top: 0.5em;
+    padding-bottom: 1px;
+    padding-top: 1px;
 }
 
 .content li {
@@ -120,10 +134,11 @@ footer {
 }
 
 .content .ticked {
-    background-color: #05ff2a;
-    border: 2px solid black;
-    border-radius: 4px;
-    margin-bottom: 1px;
+    background-color: lightgray;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding-bottom: 1px;
+    padding-top: 1px;
 }
 
 .content .list:hover {
@@ -167,13 +182,13 @@ footer {
 footer {
     background-image: url("../images/notepad-backgrounds-bottom.jpg");
     background-repeat: no-repeat;
-    height: 80px;
+    height: 78px;
 }
 
 footer button {
     background-color: #0D59A9;
     border-color: #0D59A9;
-    border-radius: 4px;
+    border-radius: 5px;
     border-style: none;
     color: white;
     font-size: 1.125rem;
