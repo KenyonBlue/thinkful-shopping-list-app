@@ -32,7 +32,7 @@ function addItem() {
         $('.shopping-list').append(row);
 
         //empty the input box after submit by resetting the value
-        itemValue = $('#addItemValue').val('');
+        $('#addItemValue').val('');
     }
 }
 
@@ -42,7 +42,7 @@ function addItem() {
 function tickItem() {
     //alert("I've just activated the tickItem() function");
 
-    //$(this) means that on WHATEVER you just clicked, go to the parent of it (in our case the LI) and add / remove the "ticked" class to it
+    //$(this) means that on WHATEVER you just clicked (the checkbox button), go to the parent of it (in our case the LI above the it) and add / remove the "ticked" class to it
     $(this).parent().toggleClass('ticked');
 }
 
@@ -50,7 +50,7 @@ function tickItem() {
 function deleteItem() {
     //alert("I've just activated the deleteItem() function");
 
-    //$(this) means that on WHATEVER you just clicked, go to the parent of it (in our case the LI) and remove it
+    //$(this) means that on WHATEVER you just clicked (the delete one item button), go to the parent of it (in our case the LI above it) and remove the parent and everything inside it
     $(this).parent().remove();
 }
 
@@ -58,7 +58,7 @@ function deleteItem() {
 function deleteAll() {
     //alert("I've just activated the deleteAll() function");
 
-    //find the UL container (in our case having the class shopping-list) which contains all the LIs and delete it
+    //find the UL container (in our case having the class shopping-list) which contains all the LIs and delete the parent and everything inside it
     $('.shopping-list').empty();
 }
 
