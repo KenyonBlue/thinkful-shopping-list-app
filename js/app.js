@@ -1,4 +1,21 @@
-/* debugging strategies
+/* How to write JS apps
+
+Milestone one: create the basic structure
+- first define the main parts of the JS code
+- inside of each of them describe in plain english what you are going to do
+- create the functions with names but no content
+- create the connection between the functions and the html buttons which are activating them
+
+
+Milestone two: start complete the functions definitions and test them line by line
+- inside each functions write in plain english what are the steps to follow
+- complete one step at a time and test it
+*/
+
+
+
+/* Debugging strategies
+
 debugging level 1 => check if JS syntax is correct (check console in Web Dev )
 debugging level 2 => check if the targeting is working (check the connection between the HTML element and equivalent JS functionality ==> alert("here"); inside the function)
 debugging level 3 => check if the logic makes sense (check if the JS functionality returns what we expect ==> alert(VALUE-NAME); inside the function)
@@ -13,10 +30,14 @@ before document ready we are defining all the functions and we explain what they
 
 /* function for adding items to the shopping list using the add to list button and enter key */
 function addItem() {
+    //check if the targeting is working
     //alert("I've just activated the addItem() function");
 
     //get the value of the input box
     var itemValue = $('#addItemValue').val();
+
+    //check if the logic makes sense -> make sure that you get the value you are adding in the html
+    //alert(itemValue);
 
     //validate input
     if (itemValue.length === 0) {
@@ -40,6 +61,7 @@ function addItem() {
     Note: create the 'ticked' class in CSS file first! You don't need to use it in the index.html because the JS will be adding it automatically to the index
 */
 function tickItem() {
+    //check if the targeting is working
     //alert("I've just activated the tickItem() function");
 
     //$(this) means that on WHATEVER you just clicked (the checkbox button), go to the parent of it (in our case the LI above the it) and add / remove the "ticked" class to it
@@ -48,6 +70,7 @@ function tickItem() {
 
 /*function to remove an item from the list clicking on the 'x' */
 function deleteItem() {
+    //check if the targeting is working
     //alert("I've just activated the deleteItem() function");
 
     //$(this) means that on WHATEVER you just clicked (the delete one item button), go to the parent of it (in our case the LI above it) and remove the parent and everything inside it
@@ -56,9 +79,10 @@ function deleteItem() {
 
 /*function to reset and clear the list */
 function deleteAll() {
+    //check if the targeting is working
     //alert("I've just activated the deleteAll() function");
 
-    //find the UL container (in our case having the class shopping-list) which contains all the LIs and delete the parent and everything inside it
+    //find the UL container (in our case having the class shopping-list) which contains all the LIs and delete all the children inside it
     $('.shopping-list').empty();
 }
 
